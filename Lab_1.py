@@ -1,10 +1,8 @@
-numbers_fib = [0, 1]
-n = 8
+n = int(input("Введіть N:"))
 
-for i in range(2, n):
-    numbers_fib.append(numbers_fib[-1] + numbers_fib[-2])
-
-print("Перші", n, "чисел ряду Фібоначчі:")
-print(numbers_fib)
-sum_fib = sum(numbers_fib)
-print("Сума перших", n, "чисел ряду Фібоначчі:", sum_fib)
+while (n < 1 or n > 9):
+    n = int(input("Число має бути > 1 і < 9. Введіть N:"))
+for i in range(1, n+1):
+    # створює послідовність чисел від 1 до i (включно) для кожного рядка. Потім за допомогою методу join() ці числа конвертуються в рядок і друкується.
+    row = ' '.join(str(j) for j in range(1, i + 1))
+    print(row)
