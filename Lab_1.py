@@ -1,8 +1,22 @@
-n = int(input("Введіть N:"))
+a = int(input("Введіть а: "))
 
-while (n < 1 or n > 9):
-    n = int(input("Число має бути > 1 і < 9. Введіть N:"))
-for i in range(1, n+1):
-    # створює послідовність чисел від 1 до i (включно) для кожного рядка. Потім за допомогою методу join() ці числа конвертуються в рядок і друкується.
-    row = ' '.join(str(j) for j in range(1, i + 1))
-    print(row)
+while (a < 0):
+    a = int(input("Значення 'а' має бути більше 0. Введіть а: "))
+
+b = int(input("Введіть b: "))
+while (b < 0):
+    b = int(input("Значення 'b' має бути більше 0.Введіть b: "))
+
+if a < b:
+    result = a/b-3
+    print("a < b")
+
+elif a == b:
+    result = -5
+    print("a == b")
+
+else:
+    result = ((a*a-b)/b)
+    print("a > b")
+
+print("result = ", format(result, '.2f'))
